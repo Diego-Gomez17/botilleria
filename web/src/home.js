@@ -27,7 +27,6 @@ fetch(url)
 let click= document.querySelectorAll(".tipo").forEach(el => {
     el.addEventListener("click", e => {
       let cate = e.target.getAttribute("id");
-      console.log("Se ha clickeado el id "+cate);
       listaProductos.parentNode.removeChild(listaProductos)
     
         url=`https://api-bsale-boti.herokuapp.com/${cate}`
@@ -41,8 +40,6 @@ let click= document.querySelectorAll(".tipo").forEach(el => {
     }); 
     
 });
-
-
 
 //busca un item en espacifico
 buscar.addEventListener('keydown', (e) => {
@@ -60,14 +57,11 @@ buscar.addEventListener('keydown', (e) => {
     }
 })
 
-
-
 //renderiza los datos por pantalla
 function mostrarDatos(data){
     
-
+    //valida que exista el div listaProducto de no existir lo creara
     if(!validado()){
-        console.log("estoy dentro del if")
         const listaProductos = document.createElement("div")
         listaProductos.setAttribute("id","listaProductos")
         con.appendChild(listaProductos)
@@ -120,6 +114,7 @@ function mostrarDatos(data){
     }
     
 }
+
 //valida que exista el "div" de lista de productos
 function validado(){
     validador=!!document.getElementById("listaProductos")
