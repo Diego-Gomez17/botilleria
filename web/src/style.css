@@ -15,17 +15,6 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
-}
-#lupa{
-    width: 10px;
-    height: 10px;
-    position:absolute;
-    right: 1px;
-    top: 30px;
-    background-color: antiquewhite;
-    padding: 10px;
-    border-radius: 100%;
 }
 h1{
     width: 300px;
@@ -80,7 +69,7 @@ input{
     width: 210px;
     height:300px;
     margin: 10px;
-    background-color: rgb(196, 200, 255);
+    background-color: rgb(237, 249, 230);
 
     display: flex;    
     flex-direction: column;
@@ -92,12 +81,18 @@ img{
 }
 
 #nombre{
-    background-color: antiquewhite;
+    background-color: rgba(245, 243, 241, 0.698);
+    text-align: center;
+
     
 }
 #precio{
     font-size: 18px;
-    background-color: aquamarine;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+    background-color: rgb(231, 243, 239);
+    
     
 }
 #desc{
@@ -108,12 +103,6 @@ img{
     padding: 6px;
     border-radius: 100%;
 }
-
-
-
-
-
-
 
 .producto:hover{
     background-image:

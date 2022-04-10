@@ -62,22 +62,6 @@ buscar.addEventListener('keydown', (e) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //renderiza los datos por pantalla
 function mostrarDatos(data){
     
