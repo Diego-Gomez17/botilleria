@@ -15,7 +15,7 @@ let contenedor = document.getElementById('listaProductos');
 let buscar= document.getElementById("buscar")
 
 //trae los datos de la BD sin filtrar
-url="http://localhost:3000/producto/"
+url="https://api-bsale-boti.herokuapp.com/producto/"
 fetch(url)
 .then(data=> data.json())
 .then(data=>{
@@ -30,7 +30,7 @@ let click= document.querySelectorAll(".tipo").forEach(el => {
       console.log("Se ha clickeado el id "+cate);
       listaProductos.parentNode.removeChild(listaProductos)
     
-        url=`http://localhost:3000/${cate}`
+        url=`https://api-bsale-boti.herokuapp.com/${cate}`
         fetch(url)
         .then(data=> data.json())
         .then(data=>{
@@ -49,7 +49,7 @@ buscar.addEventListener('keydown', (e) => {
     if (e.key === "Enter"){ 
         listaProductos.parentNode.removeChild(listaProductos)
     
-        url=`http://localhost:3000/producto/${buscar.value}`
+        url=`https://api-bsale-boti.herokuapp.com/producto/${buscar.value}`
         fetch(url)
         .then(data=> data.json())
         .then(data=>{
