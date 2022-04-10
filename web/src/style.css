@@ -1,0 +1,125 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.nav{
+    background-color: aliceblue;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#lupa{
+    width: 10px;
+    height: 10px;
+    position:absolute;
+    right: 1px;
+    top: 30px;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 100%;
+}
+h1{
+    width: 300px;
+    height: 30px;
+    margin-left: 30px;
+
+}
+input{
+    width: 200px;
+    height: 30px;
+    margin-right: 40px;
+}
+
+
+#con{
+    display: flex;
+    
+
+}
+
+.filtro{
+    
+    background-color:rgb(236, 235, 235) ;
+    width: 240px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+
+}
+.tipo{
+    padding: 3px;
+    padding-left: 37px;
+    width: 200px;
+    height: 50px;
+}
+.tipo:hover{
+    background-color: rgba(132, 129, 129, 0.563);
+}
+
+
+#listaProductos{
+   
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    width: auto;
+    height: auto;
+}
+.producto{
+    width: 210px;
+    height:300px;
+    margin: 10px;
+    background-color: rgb(196, 200, 255);
+
+    display: flex;    
+    flex-direction: column;
+}
+img{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+
+#nombre{
+    background-color: antiquewhite;
+    
+}
+#precio{
+    font-size: 18px;
+    background-color: aquamarine;
+    
+}
+#desc{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: red;
+    padding: 6px;
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+.producto:hover{
+    background-image:
+    linear-gradient(
+     rgba(0, 0, 0, 0.5),
+     rgba(0, 0, 0, 0.5)
+    );
+    filter: brightness(0.8);
+}
