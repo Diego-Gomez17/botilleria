@@ -21,7 +21,7 @@ app.use(cors());
 
 
 //routes
-app.use(require('./routes/querys'));
+app.use(require('./src/routes/querys'));
 //app.use(require('./routes/product'));
 
 
