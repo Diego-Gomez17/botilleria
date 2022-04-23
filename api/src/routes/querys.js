@@ -1,6 +1,17 @@
 const router = require('express').Router()
 const mysqlConnection = require('../database')
 
+//se envia la lista de categorias
+router.get('/categoria',(req,res)=>{
+    mysqlConnection.query('SELECT * FROM category',(err,rows,field)=>{
+        if(!err){
+            res.json(rows);
+            console.log("Se ha realizado una consulta a la BD!!")
+        }else{
+            console.log(err);
+        }
+    })
+})
 //envia los datos sin filtrar
 router.get('/producto' , (req , res)=>{
     mysqlConnection.query('SELECT * FROM product',(err,rows,field)=>{
