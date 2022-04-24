@@ -1,20 +1,14 @@
 //contenedor padre de filtro y listaProductos
 let con = document.getElementById('con')
-
-//categorias
-/*
-let bebidaEnergetica = document.getElementById('1');
-let pisco = document.getElementById('2');
-let ron = document.getElementById('3');
-let bebida = document.getElementById('4');
-let snack = document.getElementById('5');
-let cerveza = document.getElementById('6');
-let vodka = document.getElementById('7');
-*/
-
-
+//contenedor de los productos
+let contenedor = document.getElementById('listaProductos');
+//input del buscador
+let buscar= document.getElementById("buscar")
+//contenedor de las categorias
 let contCategoria = document.getElementById('filtro');
-//categorias
+
+/*----------------- CATEGORIAS------------------------------ */
+//categorias (obtiene los datos de la api)
 urlCategory = "https://api-bsale-boti.herokuapp.com/categoria/"
 fetch(urlCategory)
 .then(data=> data.json())
@@ -25,29 +19,24 @@ fetch(urlCategory)
 
 //rendereiza las categorias
 function mostrarCategory(data){
-    console.log("holi")
-    for (cate of data){
-        console.log("estoy en las categorias")
+    for (cat of data){
+        //crea el div categoria
         const categoria = document.createElement("div");
-        categoria.setAttribute("id","categoria");
+        categoria.setAttribute("class","categoria");
         contCategoria.appendChild(categoria);
 
-
+        //inserta la categoria
         const nombre = document.createElement("p")
-        nombre.setAttribute("id","nombre")
-        const textName = document.createTextNode(item.name) 
+        nombre.setAttribute("class","cate")
+        nombre.setAttribute("id",cat.id)
+        const textName = document.createTextNode(cat.name) 
         nombre.appendChild(textName)
         categoria.appendChild(nombre)
     }
 }
-        
-//-----------------------------------------------------------
 
-//contenedor de los productos
-let contenedor = document.getElementById('listaProductos');
-//input del buscador
-let buscar= document.getElementById("buscar")
 
+/*--------------------PRODUCTOS-------------------------- */
 //trae los datos de la BD sin filtrar
 url="https://api-bsale-boti.herokuapp.com/producto/"
 fetch(url)
@@ -58,7 +47,7 @@ fetch(url)
 .catch(error => console.log(error))
 
 //trae los datos por categoria
-let click= document.querySelectorAll(".tipo").forEach(el => {
+let click= document.querySelectorAll("#filtro").forEach(el => {
     el.addEventListener("click", e => {
       let cate = e.target.getAttribute("id");
       //remueve la lista de productos
