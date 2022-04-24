@@ -1,7 +1,7 @@
 # Botilleria
 aplicación web que obtiene datos de los productos que oferta una botelleria a través de una BD, la app obtiene **nombre**, **precio**, **descuento**, una **imagen referencial** de esta a través de un **json**, el cual se utiliza para finalmente renderizar la vista al cliente, este **json** es obtenido  gracias a una pequeña **API** que realiza las consultas a la BD y se las entrega al frontend.
 ## API
-la **API** posee 4 rutas las cuales nos permite obtener datos de la **Base de Datos**
+la **API** posee 4 rutas las cuales nos permite obtener los datos
 
  1. **/categoria**
  este retorna las categorías de los productos existentes en la BD
