@@ -16,7 +16,7 @@ retorna los productos que posean la misma categoria, **:id** es igual al **id** 
 
 ## Front-end
 el front-end posee un **js** llamado **home.js** el cual contiene todas las interacciones con la **API**, que son realizadas atreves del método **fetch** el cual obtendrá los datos de la BD y los transformara en un **json**.
-**home.js** posee 4 ***funciones*** encargadas de renderizar los productos en pantallas, según la interacción del usuario sobre la misma
+**home.js** posee 4 ***funciones*** encargadas de renderizar los productos en pantalla, según la interacción del usuario sobre la misma
  
 
  1. **click**
